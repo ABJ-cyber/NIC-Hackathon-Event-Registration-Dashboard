@@ -1,0 +1,90 @@
+/* Paper.css */
+/* CSS Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Rest of the styles */
+.paper-banner {
+  background-color: #0044a0; /* Goldman Sachs blue */
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  height: 150px;
+  width: 100%; /* Set to 100% to stretch across the entire width */
+}
+
+.paper-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.title {
+  font-size: 48px;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-family: "Arial", sans-serif;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 20px; /* Add margin to create space between title and description */
+}
+
+.cta-button {
+  background-color: white;
+  color: #0044a0; /* Goldman Sachs blue */
+  padding: 15px 30px;
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0044a0; /* Goldman Sachs blue */
+  color: white;
+}
+
+/* Additional styles for logo and title within the banner */
+.logo-and-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px; /* Reduce the margin to create more space */
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 600px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 18px;
+  }
+}
