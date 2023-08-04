@@ -1,5 +1,6 @@
 import React from "react";
 import Countdown from "../components/Countdown";
+import { Link } from "react-router-dom";
 import AvatarComponent from "../components/AvatarComponent"; // Assuming the path is correct
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -75,6 +76,7 @@ const HomePage = () => {
                 marginTop: "40px",
               }}
             >
+            <Link to="/events/?whitepaperpresentations" style={{ textDecoration: "none" }}>
               <Card
                 style={{
                   flex: "1",
@@ -94,7 +96,9 @@ const HomePage = () => {
                   </Typography>
                 </CardContent>
               </Card>
+              </Link>
 
+            <Link to="/events/?techtalks" style={{ textDecoration: "none" }}>
               <Card
                 style={{
                   flex: "1",
@@ -114,7 +118,9 @@ const HomePage = () => {
                   </Typography>
                 </CardContent>
               </Card>
+              </Link>
 
+              <Link to="/events/?trainings" style={{ textDecoration: "none" }}>
               <Card
                 style={{
                   flex: "1",
@@ -134,6 +140,7 @@ const HomePage = () => {
                   </Typography>
                 </CardContent>
               </Card>
+              </Link>
             </div>
     </>
   );
