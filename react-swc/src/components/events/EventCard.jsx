@@ -13,7 +13,7 @@ const EventCard = ({ name, tags, imageUrl }) => {
       <CardActionArea>
         <CardMedia component="img" height="140" image={imageUrl} />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography gutterBottom variant="h5" component="div">
             {name}
           </Typography>
           <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
