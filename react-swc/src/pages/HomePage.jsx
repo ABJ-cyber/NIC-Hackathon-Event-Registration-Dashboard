@@ -1,5 +1,6 @@
 import React from "react";
 import Countdown from "../components/Countdown";
+import { Link } from "react-router-dom";
 import AvatarComponent from "../components/AvatarComponent"; // Assuming the path is correct
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -72,15 +73,16 @@ const HomePage = () => {
                 display: "flex",
                 justifyContent: "space-around",
                 alignItems: "stretch",
-                marginTop: "40px",
+                marginTop: "1px",
               }}
             >
+            <Link to="/events/?whitepaperpresentations" style={{ textDecoration: "none" }}>
               <Card
                 style={{
                   flex: "1",
                   textAlign: "center",
-                  minWidth: "200px",
-                  minHeight: "150px",
+                  width: "400px", // Set a fixed width for the card
+                  height: "150px",
                   margin: "8px",
                   display: "flex",
                   justifyContent: "center",
@@ -94,13 +96,15 @@ const HomePage = () => {
                   </Typography>
                 </CardContent>
               </Card>
+              </Link>
 
+            <Link to="/events/?techtalks" style={{ textDecoration: "none" }}>
               <Card
                 style={{
                   flex: "1",
                   textAlign: "center",
-                  minWidth: "200px",
-                  minHeight: "150px",
+                  width: "400px", // Set a fixed width for the card
+                  height: "150px", // Set a fixed height for the card
                   margin: "8px",
                   display: "flex",
                   justifyContent: "center",
@@ -114,13 +118,15 @@ const HomePage = () => {
                   </Typography>
                 </CardContent>
               </Card>
+              </Link>
 
+              <Link to="/events/?trainings" style={{ textDecoration: "none" }}>
               <Card
                 style={{
                   flex: "1",
                   textAlign: "center",
-                  minWidth: "200px",
-                  minHeight: "150px",
+                  width: "400px", // Set a fixed width for the card
+                  height: "150px",
                   margin: "8px",
                   display: "flex",
                   justifyContent: "center",
@@ -134,6 +140,7 @@ const HomePage = () => {
                   </Typography>
                 </CardContent>
               </Card>
+              </Link>
             </div>
     </>
   );
