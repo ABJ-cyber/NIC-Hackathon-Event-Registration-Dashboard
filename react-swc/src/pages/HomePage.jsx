@@ -73,7 +73,7 @@ const HomePage = () => {
                 display: "flex",
                 justifyContent: "space-around",
                 alignItems: "stretch",
-                marginTop: "40px",
+                marginTop: "1px",
               }}
             >
             <Link to="/events/?whitepaperpresentations" style={{ textDecoration: "none" }}>
@@ -81,8 +81,8 @@ const HomePage = () => {
                 style={{
                   flex: "1",
                   textAlign: "center",
-                  minWidth: "200px",
-                  minHeight: "150px",
+                  width: "400px", // Set a fixed width for the card
+                  height: "150px",
                   margin: "8px",
                   display: "flex",
                   justifyContent: "center",
@@ -103,8 +103,8 @@ const HomePage = () => {
                 style={{
                   flex: "1",
                   textAlign: "center",
-                  minWidth: "200px",
-                  minHeight: "150px",
+                  width: "400px", // Set a fixed width for the card
+                  height: "150px", // Set a fixed height for the card
                   margin: "8px",
                   display: "flex",
                   justifyContent: "center",
@@ -125,8 +125,8 @@ const HomePage = () => {
                 style={{
                   flex: "1",
                   textAlign: "center",
-                  minWidth: "200px",
-                  minHeight: "150px",
+                  width: "400px", // Set a fixed width for the card
+                  height: "150px",
                   margin: "8px",
                   display: "flex",
                   justifyContent: "center",
