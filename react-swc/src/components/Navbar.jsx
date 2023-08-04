@@ -55,7 +55,7 @@ export default function SearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Link to="/home">
+          <Link to="/">
             <Typography
               variant="h6"
               noWrap
