@@ -55,14 +55,16 @@ export default function SearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ px: 3, display: { xs: "none", sm: "block" } }}
-          >
-            EngX
-          </Typography>
+          <Link to="/home">
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ px: 3, display: { xs: "none", sm: "block" } }}
+            >
+              EngX
+            </Typography>
+          </Link>
           <Box sx={{ display: "flex", color: "white", gap: 2, mr: "auto" }}>
             <Link to={"/about"}>About</Link>
             <Link to={"/events"}>Events</Link>

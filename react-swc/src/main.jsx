@@ -6,12 +6,17 @@ import Layout from "./components/Layout.jsx";
 import EventsPage from "./pages/EventsPage";
 import EventDetailsPage from "./pages/EventDetails";
 import AboutPage from "./pages/AboutPage";
+import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
+      {
+        path: "home",
+        element: <HomePage />,
+      },
       {
         path: "events",
         element: <EventsPage />,
