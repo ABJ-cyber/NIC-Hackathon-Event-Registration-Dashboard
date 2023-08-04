@@ -5,7 +5,7 @@ from .serializers import *
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from django.db.models import Q
 
 # Create your views here.
 
@@ -47,3 +47,9 @@ class TagRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Tag.objects.all()
     serializer_class = TagSerializer
 
+@api_view(['GET'])
+def search(request):
+    query = request.GET.get('q', '')  # Get the search query from the request parameters
+    events = Event.objects.filter(Q(name__icontains=query) | Q(speaker__name__icontains=query)).distinct()
+    serializer = EventSerializer(events, many=True)
+    return Response(serializer.data)
