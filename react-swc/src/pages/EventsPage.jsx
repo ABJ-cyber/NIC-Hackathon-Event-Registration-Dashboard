@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import EventCard from "../components/events/EventCard";
 import Paper from "@mui/material/Paper";
@@ -234,8 +234,19 @@ const Search = styled("div")(({ theme }) => ({
 const EventsPage = () => {
   const searchRef = useRef(null);
 
+  const [filteredEvents, SetFilteredEvents] = useState(eventsData);
   const handleSearch = () => {
-    console.log(searchRef.current.value);
+    if (searchRef.current.value === "") {
+      SetFilteredEvents(eventsData);
+      return;
+    }
+
+    const searchVal = searchRef.current.value;
+    const newEvents = eventsData.filter((event) =>
+      event.name.includes(searchVal)
+    );
+    console.log(newEvents);
+    SetFilteredEvents(newEvents);
   };
 
   return (
@@ -256,7 +267,7 @@ const EventsPage = () => {
         />
       </Search>
       <Grid container spacing={2} columns={3} columnGap={3} rowGap={3}>
-        {eventsData.map((event) => (
+        {filteredEvents.map((event) => (
           <EventCard
             name={event.name}
             tags={event.tags}
